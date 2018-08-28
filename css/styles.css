@@ -183,7 +183,7 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
 
 .posts-list {
 margin-bottom: 30px;
-margin-top: 40px;
+margin-top: 0;
 width: 75%;
 float: right;
 
