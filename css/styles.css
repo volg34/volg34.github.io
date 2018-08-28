@@ -183,7 +183,7 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
 
 .posts-list {
 margin-bottom: 30px;
-margin-top: 0;
+margin-top: 40px;
 width: 75%;
 float: right;
 
@@ -255,7 +255,7 @@ white-space: nowrap;
 aside {
 width: 23%;
 float: left;
-margin-top: 10px;
+margin-top: 50px;
 }
 
 .widget {
@@ -318,39 +318,7 @@ margin-right: 15px;
 	margin-bottom: auto;
 	float: left;
 }
-/* форма подписки */
-#subscribe {
-position: relative;
-width: 100%;
-padding: 15px 0;
-}
-#subscribe input {
-width: 100%;
-display: block;
-float: left;
-border: 2px solid #EBEBE3;
-padding: 0 0 0 10px;
-height: 40px;
-position: relative;
-outline: none;
-color: #9E9C9C;
-font-style: italic;
-}
-#subscribe button {
-padding: 0 15px;
-background: transparent;
-height: 40px;
-border: none;
-position: absolute;
-right: 0;
-color: #EF5A42;
-cursor: pointer;
-font-size: 18px;
-}
-#subscribe input:focus + button {
-background: #003153;
-color: white;
-}
+
 
 footer {
 padding: 30px 0;
@@ -383,7 +351,12 @@ text-align: right;
 
 }
 
-
+.zher {
+	text-align: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 @media (max-width: 768px) {
 
@@ -410,7 +383,7 @@ z-index: 3;
 
 #menu li {
 display: block;
-padding-left: 15px;
+padding-left: 30px;
 border-bottom: 1px solid #EBEBE3;
 margin-right: 0;
 }
@@ -436,6 +409,7 @@ margin-bottom: 15px;
 
 #menu {
 top: 118px;
+height: 300px;
 }
 
 #searchform {
@@ -461,9 +435,35 @@ text-align: center;
 .footer-acc {
 	text-align: center;
 	margin-bottom: 0;
+}
+
+.post {
+	margin-left: 10px;
+}
+
+#menu > li:hover .submenu {
+	opacity: 0;
+	visibility: hidden;
+}
 
 }
+
+@media (min-width: 460px) and (max-width: 760px) {
+	.post {margin-left: 30%;}
+	#menu > li:hover .submenu {
+	opacity: 0;
+	visibility: hidden;
 }
+}
+
+@media (max-width: 640px) {
+	.post {margin-left: 10%;}
+	#menu > li:hover .submenu {
+	opacity: 0;
+	visibility: hidden;
+}
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -495,14 +495,16 @@ td {
   position: relative;
 }
 
+
+
 .submenu {
   position: absolute;
   z-index: 4;
-  left: 50%;
+  left: 100%;
   top: 100%;
   width: 150px;
-  padding: 15px 0 15px;
-  margin-top: 5px;
+  padding: 0;
+  margin-top: 1px;
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 30px rgba(0,0,0,.2);
@@ -517,10 +519,22 @@ td {
   opacity: 1;
   transform: translate(-50%, 0);
 }
+
+#menu > li:hover .submenu {
+	width: 500px;
+}
+
 .submenu a {
   padding: 5px 10px;
   transition: .3s linear;
 }
+
+.submenu li {
+	text-align: center;
+	align-items: center;
+	
+}
+
 .acc-info {
 	text-align: left;
 	margin-top: 30px;
